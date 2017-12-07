@@ -3,38 +3,18 @@
 <head>
   <title>WixblyPressSpace Editor</title>
   <script>
-    $(document).ready(function(){
-	    $('#p').click(function(){
-        var 
-      
-        
-    
+    function paragraph(){
+            var p = document.getElementById("paragraph").value;
+            document.getElementById("user").innerHTML = p;
+    } 
   </script>
 </head>
 <body>
-  <p id="one">Paragraph one</p>
-  <p id="two">Paragraph two</p>
-  <p id="three">Paragraph three</p>
-  <p id="four">Paragraph four</p>
-  <p id="five">Paragraph five</p>
-  <p id="six">Paragraph six</p>
-  <p id="seven">Paragraph seven</p>
-  <p id="eight">Paragraph eight</p>
-  <p id="nine">Paragraph nine</p>
-  <p id="ten">Paragraph ten</p>
-  <p>Please choose how many paragraphs you want. You can create and edit up to 10 paragraphs.</p>
-    <select id="p">
-	    <option value="one">1</option>
-	    <option value="two">2</option>
-	    <option value="three">3</option>
-	    <option value="four">4</option>
-      <option value="five">5</option>
-      <option value="six">6</option>
-      <option value="seven">7</option>
-      <option value="eight">8</option>
-      <option value="nine">9</option>
-      <option value="ten">10</option>
-    </select>
-  <button id="p">Enter</button>
+  <p id="user">This is a paragraph. You are free to make it a paragraph. Or you can make it not a paragraph. The choice is yours.</p>
+  <p>Please type your non-paragraph in the space below. Then press the enter key. The one on the screen, not on the keyboard.</p>
+  <br>
+  <input type="text" id="paragraph">
+  <br>
+  <button onclick="paragraph()">Enter</button>
 </body>
 </html>
