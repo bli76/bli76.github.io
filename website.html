@@ -19,13 +19,6 @@
 	    font-size: 24px;
 	    font-family: calibri,Sans-serif;
     }
-    input {
-            height: 500px;
-	    width: 100%;
-            font-size: 18px;
-	    padding: 12px 20px;
-	    box-sizing: border-box;
-    }
   </style>
   <script>
     function paragraph(){
@@ -37,6 +30,6 @@
 <body>
   <p id="user">This is a paragraph. You are free to make it a paragraph. Or you can make it not a paragraph. The choice is yours.Please type your non-paragraph in the space below. Then press the enter key. The one on the screen, not on the keyboard.</p>
   <br>
-  <input type="text" id="paragraph" size="100" onkeyup="paragraph()">
+  <textarea id="paragraph" onkeyup="paragraph()">
 </body>
 </html>
