@@ -33,7 +33,12 @@
             var p = document.getElementById("paragraph").value;
             document.getElementById("user").innerHTML = p;
     } 
-$(document).ready(function(){
+    function image(){
+	  var i = document.getElementById("image").value;
+	  document.getElementById("blank").src = i;
+	  }
+	  
+//$(document).ready(function(){
 	
 	
   </script>
@@ -43,8 +48,8 @@ $(document).ready(function(){
   <p id="user">This is a paragraph. You are free to make it a paragraph. Or you can make it not a paragraph. The choice is yours. Please type your non-paragraph in the space below, and your text will "magically" appear on your screen! Incredible!</p>
   <br>
 	<textarea id="paragraph" onkeyup="paragraph()">This is a paragraph. You are free to make it a paragraph. Or you can make it not a paragraph. The choice is yours. Please type your non-paragraph in the space below, and your text will "magically" appear on your screen! Incredible!</textarea>
-<img src="an image.png" alt="" id="blank">
-<br><input type="text" placeholder="Image URL">
+<br><img src="an image.png" alt="" id="blank">
+<br><input type="text" placeholder="Image URL" onkeyup="image()" id="image">
 <br><button id="hide">Hide all buttons and text boxes</button>
 </body>
 </html>
