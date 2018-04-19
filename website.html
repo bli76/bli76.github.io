@@ -27,11 +27,12 @@
 	   width: 1200px;
 	   font-size: 20px;
 	  }
-   .show {
-	   display: none;
-	  }
+   .show {  
+       display: none;
+   }
   </style>
   <script>
+
     function paragraph() {
             var p = document.getElementById("paragraph").value;
             document.getElementById("user").innerHTML = p;
@@ -40,23 +41,32 @@
 	  var i = document.getElementById("image").value;
 	  document.getElementById("blank").src = i;
 	  }
-	  
+      
+    function hide(){
+        var hide = document.getElementById("show");
+        hide.classList.remove("show");
+    }
+
+/*
 $(document).ready(function(){
+        //$("#show").hide();
+    
 	$("#hide").click(function(){
-		$(".destroy").addClass("show");
+		$(".destroy").hide();
 		$("#show").removeClass("show");
 	});
 	});
+*/
   </script>
 </head>
 <body>
   <div id="logo"><a href="https://bryan-li.github.io/home.html"><img src="wixblypressspace.png" alt="WixblyPressSpace"></a></div>
   <p id="user">This is a paragraph. You are free to make it a paragraph. Or you can make it not a paragraph. The choice is yours. Please type your non-paragraph in the space below, and your text will "magically" appear on your screen! Incredible!</p>
   <br>
-	<textarea id="paragraph" onkeyup="paragraph()" class="destroy">This is a paragraph. You are free to make it a paragraph. Or you can make it not a paragraph. The choice is yours. Please type your non-paragraph in the space below, and your text will "magically" appear on your screen! Incredible!</textarea>
+	<div class="destroy"><textarea id="paragraph" onkeyup="paragraph()">This is a paragraph. You are free to make it a paragraph. Or you can make it not a paragraph. The choice is yours. Please type your non-paragraph in the space below, and your text will "magically" appear on your screen! Incredible!</textarea></div>
 <br><img src="an image.png" alt="" id="blank">
-<br><input type="text" placeholder="Image URL" onkeyup="image()" id="image" class="destroy">
-<br><br><button id="hide" class="destroy">Hide all buttons and text boxes</button>
-<br><button id="show" class="show">Show buttons and text boxes</button>
+        <br><div class="destroy"><input type="text" placeholder="Image URL" onkeyup="image()" id="image"></div>
+    <br><br><div class="destroy"><button id="hide" onclick="hide()">Hide all buttons and text boxes</button></div>
+    <br><div><button id="show" class="show">Show buttons and text boxes</button></div>
 </body>
 </html>
