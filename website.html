@@ -4,12 +4,12 @@
   <title>WixblyPressSpace Editor</title>
   <style>
     body {
-       	     background: linear-gradient(#66ff66,#66d9ff);
+       	 background: linear-gradient(#66ff66,#66d9ff);
 	     color: black;
 	     text-align: left;
-       	     margin: 25px 100px 75px;
+       	 margin: 25px 100px 75px;
 	     background-repeat: no-repeat;
-    	     background-attachment: fixed;
+    	 background-attachment: fixed;
 	     font-size: 24px;
 	     font-family: calibri,Sans-serif;
     }
@@ -32,21 +32,39 @@
    }
   </style>
   <script>
-
     function paragraph() {
-            var p = document.getElementById("paragraph").value;
-            document.getElementById("user").innerHTML = p;
+        var p = document.getElementById("paragraph").value;
+        document.getElementById("user").innerHTML = p;
     } 
     function image(){
-	  var i = document.getElementById("image").value;
-	  document.getElementById("blank").src = i;
+        var i = document.getElementById("image").value;
+        document.getElementById("blank").src = i;
 	  }
       
     function hide(){
-        var hide = document.getElementById("show");
-        hide.classList.remove("show");
+        var show = document.getElementById("show");
+        show.classList.remove("show");
+        var paragraph = document.getElementById("paragraph");
+        paragraph.classList.add("show");
+        var image = document.getElementById("image");
+        image.classList.add("show");
+        var hide = document.getElementById("hide");
+        hide.classList.add("show");
+        /*var show = document.getElementByClass("destroy");
+        show.classList.add("show");*/
     }
-
+    function show(){
+        var show = document.getElementById("show");
+        show.classList.add("show");
+        var paragraph = document.getElementById("paragraph");
+        paragraph.classList.remove("show");
+        var image = document.getElementById("image");
+        image.classList.remove("show");
+        var hide = document.getElementById("hide");
+        hide.classList.remove("show"); 
+        /*var show = document.getElementByClass("destroy");
+        show.classList.remove("show");*/
+    }
 /*
 $(document).ready(function(){
         //$("#show").hide();
@@ -63,10 +81,10 @@ $(document).ready(function(){
   <div id="logo"><a href="https://bryan-li.github.io/home.html"><img src="wixblypressspace.png" alt="WixblyPressSpace"></a></div>
   <p id="user">This is a paragraph. You are free to make it a paragraph. Or you can make it not a paragraph. The choice is yours. Please type your non-paragraph in the space below, and your text will "magically" appear on your screen! Incredible!</p>
   <br>
-	<div class="destroy"><textarea id="paragraph" onkeyup="paragraph()">This is a paragraph. You are free to make it a paragraph. Or you can make it not a paragraph. The choice is yours. Please type your non-paragraph in the space below, and your text will "magically" appear on your screen! Incredible!</textarea></div>
+	<textarea id="paragraph" onkeyup="paragraph()">This is a paragraph. You are free to make it a paragraph. Or you can make it not a paragraph. The choice is yours. Please type your non-paragraph in the space below, and your text will "magically" appear on your screen! Incredible!</textarea>
 <br><img src="an image.png" alt="" id="blank">
-        <br><div class="destroy"><input type="text" placeholder="Image URL" onkeyup="image()" id="image"></div>
-    <br><br><div class="destroy"><button id="hide" onclick="hide()">Hide all buttons and text boxes</button></div>
-    <br><div><button id="show" class="show">Show buttons and text boxes</button></div>
+        <br><input type="text" placeholder="Image URL" onkeyup="image()" id="image">
+    <br><br><button id="hide" onclick="hide()">Hide all buttons and text boxes</button>
+    <br><br><button id="show" onclick="show()" class="show">Show buttons and text boxes</button>
 </body>
 </html>
