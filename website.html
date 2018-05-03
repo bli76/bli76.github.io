@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+html>
 <head>
   <title>WixblyPressSpace Editor</title>
   <style>
@@ -65,6 +64,12 @@
         /*var show = document.getElementByClass("destroy");
         show.classList.remove("show");*/
     }
+    function  background(){
+        var up = document.getElementById("backgroundup").value;
+        var down = document.getElememtById("backgroundown").value;
+        var body = document.getElementByTagName("body");
+        body.style.background = "linear-gradient&#40;" + up + "," + down + "&#41;";
+    }
 /*
 $(document).ready(function(){
         //$("#show").hide();
@@ -81,10 +86,12 @@ $(document).ready(function(){
   <div id="logo"><a href="https://bryan-li.github.io/home.html"><img src="wixblypressspace.png" alt="WixblyPressSpace"></a></div>
   <p id="user">This is a paragraph. You are free to make it a paragraph. Or you can make it not a paragraph. The choice is yours. Please type your non-paragraph in the space below, and your text will "magically" appear on your screen! Incredible!</p>
   <br>
-	<textarea id="paragraph" onkeyup="paragraph()">This is a paragraph. You are free to make it a paragraph. Or you can make it not a paragraph. The choice is yours. Please type your non-paragraph in the space below, and your text will "magically" appear on your screen! Incredible!</textarea>
-<br><img src="an image.png" alt="" id="blank">
-        <br><input type="text" placeholder="Image URL" onkeyup="image()" id="image">
-    <br><br><button id="hide" onclick="hide()">Hide all buttons and text boxes</button>
+	<textarea id="paragraph" onkeyup="paragraph()" class="destroy">This is a paragraph. You are free to make it a paragraph. Or you can make it not a paragraph. The choice is yours. Please type your non-paragraph in the space below, and your text will "magically" appear on your screen! Incredible!</textarea>
+<br><br><img src="an image.png" alt="" id="blank">
+        <br><input type="text" placeholder="Image URL" onkeyup="image()" id="image" class="destroy">
+    <br><p>Change the background color:</p>
+    <input type="text" placeholder="Upper Background Color" onkeyup="background()" id="backgroundup">&nbsp;&nbsp;<input type="text" placeholder="Lower Background Color" onkeyup="background()" id="backgroundown">
+    <br><br><button id="hide" onclick="hide()" class="destroy">Hide all buttons and text boxes</button>
     <br><br><button id="show" onclick="show()" class="show">Show buttons and text boxes</button>
 </body>
 </html>
