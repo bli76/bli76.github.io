@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Project 1</title>
+</head>
+<body>
+    <div class="title-of-webpage">
+        <h1>Project 1</h1>
+        <h2>Wall Follower</h2>
+        <h6>Written by Bryan Li and Michael Dick</h6>    
+    </div>
+    <div class = "two-panel">
+        <p>
+            We chose to use a bang-bang control for our wall follower robot. It's a simple if statement that has the robot move closer to the wall if it's too far, move away if it's too close, or drive straight if the distance is correct within a reasonable error margin. We normalize the velocity vector so that it can drive at a constant speed regardless of what the robot is doing. Our algorithm successfully allowed the robot to complete laps around the wall, but we did notice sudden jerking when the robot needs to change directions. For smoother driving, we could implement a p-control instead to move towards or away from the wall at a speed proportional to the error.
+        </p>
+        <video controls>
+            <source src="robot-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+    </div>
+    <!-- <footer></footer> -->
+</body>
+</html>
