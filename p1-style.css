@@ -102,7 +102,7 @@ img
     
     footer
     {
-        height: 0px;  
+        bottom: -100px;
     }
 }
 @media only screen and (min-width: 1200px) 
