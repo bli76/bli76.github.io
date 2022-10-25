@@ -84,6 +84,14 @@ img
     width: 50px;
 }
 
+.description
+{
+    padding: 5px 20px;
+    border-radius: 20px;
+    margin: 0 20%;
+    font-family: 'Roboto', sans-serif;
+    background-color: grey;
+}
 @media only screen and (max-width: 700px) 
 {
     body
