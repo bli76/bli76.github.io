@@ -33,7 +33,7 @@
     </div>
     <div class="description">
         <p>
-            The next video is us testing our robot for a further distance. While we are using the lidar for input, it does accumulate "dept", by the meaning of additional θ's in the code that will throw off the robot's "pose". This will have the robot reach its position in what it thinks is the correct spot, but in reality it is slightly to severely off.
+            The next video is us testing our robot for a further distance. While we are using the odometry for input, it does accumulate "dept", by the meaning of additional θ's in the code that will throw off the robot's "pose". This will have the robot reach its position in what it thinks is the correct spot, but in reality it is slightly to severely off.
             <br><br>
             This specific video below did a good job of calculating its final destination. To note, we gave the robot <code>(5,0,0)</code>
         </p>
@@ -56,10 +56,11 @@
           Your browser does not support the video tag.
           </video>
     </div>
-    <!-- <footer>
-        <a href="https://github.com/bli76/bli76.github.io">
-        <img src="github.svg" alt="">
-    </a>
-    </footer> -->
+    <div class="description">
+        <p>
+            Aside from issues with inaccurate odometry, our bug algorithm worked quite well. It was able to detect a wall and go around until it had a clear path to the goal. One situation where our algorithm could fail is if we set our goal to be in between two walls close to each other. In that case, the robot would detect the outer wall and follow outside around it, never reaching the goal. This can be solved by having the robot make a full circle around each obstacle it encounters to find the position where it's closest to the goal, then navigating to that position to avoid other walls.
+        </p>
+    </div>
+    <br><br>
 </body>
 </html>
