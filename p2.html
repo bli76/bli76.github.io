@@ -21,12 +21,45 @@
             The Bug Algorithm project focused on switching states from a robot following set path, and if an obstruction was detected on that path then it switched to the Wall Follower algorithm. This algorithm used scans from the lidar on top of the robot to get distance readings, and then the robot would make a decision based on those readings.
             <br> <br>
             Some basic ideas like dot product of vectors, use of trigonometric function to rotate the robot's direction, and using C++ to implement the code to the robot. 
+            <br><br>
+            Below is a trial of our robot running a small distance. We set the robot to travel to the coordinates of <code>(2,0,0)</code> where the coordinates follow <code>(x,y,θ)</code>.
         </p>
     </div>
-    <footer>
+    <div class="description">
+        <video controls>
+            <source src="videos/short-trail.MOV" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+    </div>
+    <div class="description">
+        <p>
+            The next video is us testing our robot for a further distance. While we are using the lidar for input, it does accumulate "dept", by the meaning of additional θ's in the code that will throw off the robot's "pose". This will have the robot reach its position in what it thinks is the correct spot, but in reality it is slightly to severely off.
+            <br><br>
+            This specific video below did a good job of calculating its final destination. To note, we gave the robot <code>(5,0,0)</code>
+        </p>
+    </div>
+    <div class="description">
+        <video controls>
+            <source src="videos/long-trail.MOV" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+    </div>
+    <div class="description">
+        <p>
+            As you'll see, in the next video that is below, our robot's pose was severely off. We had our robot turn before it was heading to its final position, and this spin lead to a lot of additional θ's as discussed above.
+            To note, we gave the robot <code>(5,0,π/4)</code>.
+        </p>
+    </div>
+    <div class="description">
+        <video controls>
+            <source src="videos/spin-trail.MOV" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+    </div>
+    <!-- <footer>
         <a href="https://github.com/bli76/bli76.github.io">
         <img src="github.svg" alt="">
     </a>
-    </footer>
+    </footer> -->
 </body>
 </html>
