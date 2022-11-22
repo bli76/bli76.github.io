@@ -48,7 +48,7 @@ body
 .two-panel > p
 {
     font-family: 'Roboto', sans-serif;
-    background-color: grey;
+    background-color: #a9a8a8;
     height: 350px;
     border-radius: 10px;
     text-align: center;
@@ -90,7 +90,7 @@ img
     border-radius: 20px;
     margin: 0 20%;
     font-family: 'Roboto', sans-serif;
-    background-color: grey;
+    background-color: #b9b5b5;
     margin-top: 10px;
 }
 @media only screen and (max-width: 700px) 
