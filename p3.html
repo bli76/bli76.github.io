@@ -26,14 +26,38 @@
         <p>
             Have you ever wondered how a robot gets from point <math><mi>A</mi></math> to a point <math><mi>B</mi></math>? This project answers that question.
             <br> <br>
-            In this project we explore the idea breadth first search. First, the lidar scans an area turning that area into grid it can represent mathematically. Second, the lidar sees each grid and puts the coordinates into a queue we have written up in C++. In this algorithm we pop a coordinate from the queue and check this coordinates neighbors, and see if they have been discovered; if these neighbors have not been discovered then we add them to our queue. We repeat this process until we find our goal, and then we return this path to our robot and then the robot will drive this path.
+            In this project, we explore the idea breadth first search. First, the lidar scans an area turning that area into grid it can represent mathematically. Second, the lidar sees each grid and puts the coordinates into a queue we have written up in C++. In this algorithm we pop a coordinate from the queue, check this coordinates' neighbors, and see if they have been discovered. If these neighbors have not been discovered then we add them to our queue. We repeat this process until we find our goal. We return this path to our robot and then the robot will drive this path.
             <br><br>
-            Breadth first search (BFS) is a greedy algorithm and will find the shortest path from the starting node to the next node it is looking for. Since this is a greedy algorithm, its not guaranteed to be the optimal solution since it only makes the best decision locally. A disadvantage for BFS is that it makes discussion locally, which is great for smaller areas, but when it comes to larger areas it may take longer. Also, all of the nodes need to be stored which can take up quite a bit of memory.
+            Breadth first search (BFS) is a greedy algorithm and will find the shortest path from the starting node to the next node it is looking for. Since this is a greedy algorithm, it is not guaranteed to be the optimal solution, it only makes the best decision locally. A disadvantage for BFS is that it makes discussion locally, which is great for smaller areas, but when it comes to larger areas it may take longer. Also, all of the nodes need to be stored which can take up quite a bit of memory.
             <br><br>
             BFS always finds the shortest path locally, but not always the shortest path in the grand scheme. A-star on the other hand is guaranteed to return the shortest path because it uses path cost to determine if its a good path to take. Thus, A-star makes decision on what path is the quickest to the goal.
         </p>
     </div>
-    
+    <div class="description">
+        <p>
+            Placeholder for video an image of robot's path for map 1.
+        </p>
+    </div>
+    <div class="description">
+        <p>
+            Placeholder for video an image of robot's path for map 2.
+        </p>
+    </div>
+    <div class="description">
+        <p>
+            Placeholder for video an image of robot's path for map 3.
+        </p>
+    </div>
+    <div class="description">
+        <p>
+            Placeholder for video an image of robot's path for maze.
+        </p>
+    </div>
+    <div class="description">
+        <p>
+            Placeholder for video an video of robot's path for maze.
+        </p>
+    </div>
     <!-- <footer>
         <a href="https://github.com/bli76/bli76.github.io">
         <img src="github.svg" alt="">
