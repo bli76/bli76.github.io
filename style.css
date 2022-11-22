@@ -86,6 +86,18 @@ img
     height: 50px;
 }
 
+.two-images
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.grid-image
+{
+    margin: 0 auto;
+    width: 90%;
+}
+
 .maps
 {
     display: block;

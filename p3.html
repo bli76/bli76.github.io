@@ -28,38 +28,53 @@
             <br> <br>
             In this project, we explore the idea breadth first search. First, the lidar scans an area turning that area into grid it can represent mathematically. Second, the lidar sees each grid and puts the coordinates into a queue we have written up in C++. In this algorithm we pop a coordinate from the queue, check this coordinates' neighbors, and see if they have been discovered. If these neighbors have not been discovered then we add them to our queue. We repeat this process until we find our goal. We return this path to our robot and then the robot will drive this path.
             <br><br>
-            Breadth first search (BFS) is a greedy algorithm and will find the shortest path from the starting node to the next node it is looking for. Since this is a greedy algorithm, it is not guaranteed to be the optimal solution, it only makes the best decision locally. A disadvantage for BFS is that it makes discussion locally, which is great for smaller areas, but when it comes to larger areas it may take longer. Also, all of the nodes need to be stored which can take up quite a bit of memory.
+            (1) Breadth first search (BFS) will find the shortest path from the starting node to the next node it is looking for. BFS cannot guarantee to return an optimal solution, it only makes the best decision locally. A disadvantage for BFS is that it makes discussion locally, which is great for smaller areas, but when it comes to larger areas it may take longer. Also, all of the nodes need to be stored which can take up quite a bit of memory.
             <br><br>
-            BFS always finds the shortest path locally, but not always the shortest path in the grand scheme. A-star on the other hand is guaranteed to return the shortest path because it uses path cost to determine if its a good path to take. Thus, A-star makes decision on what path is the quickest to the goal.
+            (2) BFS always finds the shortest path locally, but not always the shortest path in the grand scheme. A-star on the other hand is guaranteed to return the shortest path because it uses path cost to determine if its a good path to take. Thus, A-star makes decision on what path is the quickest to the goal.
+            <br><br>
+            (3) One potential improvement is we could check if a potential path is leading toward the solution (if goal is positive \(x\) and \(y\), we should focus on moving in that direction).
+            <br><br>
+            (4) \(A^*\) is faster than BFS in environments where there is a lot of potential paths. \(A^*\) would not be much faster than BFS is an environment that dose not have a lot of other paths other than the goal. Below is an example where BFS (lower-left) is looking at every potential path and \(A^*\)(lower-right) goes straight toward the goal.
+            <div class="two-images">
+                <img class = "grid-image" src="/photos/narrow-bfs.png" alt="narrow bfs">
+                <img class = "grid-image" src="/photos/narrow-astar.png" alt="narrow bfs">
+            </div>
         </p>
     </div>
     <div class="description">
         <p align = "center">
-            Below is an example using BFS on <code>map 1</code>.
-            <img class = "maps"src="/photos/map1.png" alt="map-1">
+            Below is BFS on map-1 from <math><mi>(9, 48)</mi></math> to  <math><mi>(10, 10)</mi></math>.
+            <img class = "maps"src="/photos/map1-bfs.png" alt="map-1">
         </p>
     </div>
     <div class="description">
         <p align = "center">
-            This is <code>map 3</code> running our BFS algorithm.
-            <img class = "maps"src="/photos/map3.png" alt="map-1">
+            Below is \( A^* \) on map-1 from <math><mi>(9, 48)</mi></math> to  <math><mi>(10, 10)</mi></math>.
+            <img class = "maps"src="/photos/map1-astar.png" alt="map-1">
         </p>
     </div>
     <div class="description">
         <p align = "center">
-            This is <code>map 4</code> running our BFS algorithm.
-            <img class = "maps"src="/photos/map4.png" alt="map-1">
+            Below is BFS on map-3 from \((50,50)\) to \((10,91)\).
+            <img class = "maps"src="/photos/map3-bfs.png" alt="map-1">
         </p>
     </div>
     <div class="description">
-        <p>
-            Placeholder for video an image of robot's path for maze.
+        <p align = "center">
+            Below is \(A^*\) on map-3 from \((50,50)\) to \((10,91)\).
+            <img class = "maps"src="/photos/map3-astar.png" alt="map-1">
         </p>
     </div>
     <div class="description">
-        <p>
-            Placeholder for video an video of robot's path for maze.
+        <p align = "center">
+            This video is our robot running BFS on a maze that it mapped out from its lidar. 
+            First, we must map out the maze using the robot's lidar, and then the robot will internalize this map
+            and saves it as a <code>.map</code> file. Now, we can run our robot in any maze we create!
         </p>
+        <video controls>
+            <source src="videos/p3-video-bfs.mov" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
     </div>
     <!-- <footer>
         <a href="https://github.com/bli76/bli76.github.io">
