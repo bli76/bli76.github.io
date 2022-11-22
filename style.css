@@ -81,6 +81,19 @@ img
     width: 50px;
 }
 
+.buffer
+{
+    height: 50px;
+}
+
+.maps
+{
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    min-width: 50%;
+}
+
 .description
 {
     padding: 5px 20px;
