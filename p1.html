@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="p1-style.css">
+    <link rel="stylesheet" href="style.css">
     <!-- font awesome -->
     <script src="https://use.fontawesome.com/9ce831b1c5.js"></script>
     <link rel="icon" type="image/x-icon" href="ayo.png">
@@ -21,7 +21,7 @@
             We chose to use a bang-bang control for our wall follower robot. It's a simple if statement that has the robot move closer to the wall if it's too far, move away if it's too close, or drive straight if the distance is correct within a reasonable error margin. We normalize the velocity vector so that it can drive at a constant speed regardless of what the robot is doing. Our algorithm successfully allowed the robot to complete laps around the wall, but we did notice sudden jerking when the robot needs to change directions. For smoother driving, we could implement a p-control instead to move towards or away from the wall at a speed proportional to the error.
         </p>
         <video controls>
-            <source src="p1-vid.mp4" type="video/mp4">
+            <source src="videos/p1-vid.mp4" type="video/mp4">
           Your browser does not support the video tag.
           </video>
     </div>
