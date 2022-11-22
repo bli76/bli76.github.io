@@ -9,7 +9,7 @@
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="p1-style.css">
+    <link rel="stylesheet" href="style.css">
     <!-- font awesome -->
     <script src="https://use.fontawesome.com/9ce831b1c5.js"></script>
     <link rel="icon" type="image/x-icon" href="/photos/cs-tree.jpg">
@@ -26,9 +26,11 @@
         <p>
             Have you ever wondered how a robot gets from point <math><mi>A</mi></math> to a point <math><mi>B</mi></math>? This project answers that question.
             <br> <br>
-            In this project we explore the idea breadth first search. 
+            In this project we explore the idea breadth first search. First, the lidar scans an area turning that area into grid it can represent mathematically. Second, the lidar sees each grid and puts the coordinates into a queue we have written up in C++. In this algorithm we pop a coordinate from the queue and check this coordinates neighbors, and see if they have been discovered; if these neighbors have not been discovered then we add them to our queue. We repeat this process until we find our goal, and then we return this path to our robot and then the robot will drive this path.
             <br><br>
-            Below is a trial of our robot running a small distance. We set the robot to travel to the coordinates of <code>(2,0,0)</code> where the coordinates follow <code>(x,y,θ)</code>. 
+            Breadth first search (BFS) is a greedy algorithm and will find the shortest path from the starting node to the next node it is looking for. Since this is a greedy algorithm, its not guaranteed to be the optimal solution since it only makes the best decision locally. A disadvantage for BFS is that it makes discussion locally, which is great for smaller areas, but when it comes to larger areas it may take longer. Also, all of the nodes need to be stored which can take up quite a bit of memory.
+            <br><br>
+            BFS always finds the shortest path locally, but not always the shortest path in the grand scheme. A-star on the other hand is guaranteed to return the shortest path because it uses path cost to determine if its a good path to take. Thus, A-star makes decision on what path is the quickest to the goal.
         </p>
     </div>
     
