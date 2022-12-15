@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome -->
+    <script src="https://use.fontawesome.com/9ce831b1c5.js"></script>
+    <link rel="icon" type="image/x-icon" href="/photos/python-logo-only.png">
+    <title>Project 4</title>
+    
+</head>
+<body>
+    <div class="title-of-webpage">
+        <h1>Project 3</h1>
+        <h2>Path Planning</h2>
+        <h6>Written by Bryan Li and Michael Dick</h6>    
+    </div>
+    <div class="description">
+        <p>
+            Have you ever wondered how a robot gets from point <math><mi>A</mi></math> to a point <math><mi>B</mi></math>? This project answers that question.
+            <br> <br>
+            In this project, we explore the idea breadth first search. First, the lidar scans an area turning that area into grid it can represent mathematically. Second, the lidar sees each grid and puts the coordinates into a queue we have written up in C++. In this algorithm we pop a coordinate from the queue, check this coordinates' neighbors, and see if they have been discovered. If these neighbors have not been discovered then we add them to our queue. We repeat this process until we find our goal. We return this path to our robot and then the robot will drive this path.
+            <br><br>
+            (1) Breadth first search (BFS) will find the shortest path from the starting node to the next node it is looking for. BFS cannot guarantee to return an optimal solution, it only makes the best decision locally. A disadvantage for BFS is that it makes discussion locally, which is great for smaller areas, but when it comes to larger areas it may take longer. Also, all of the nodes need to be stored which can take up quite a bit of memory.
+            <br><br>
+            (2) BFS always finds the shortest path locally, but not always the shortest path in the grand scheme. A-star on the other hand is guaranteed to return the shortest path because it uses path cost to determine if its a good path to take. Thus, A-star makes decision on what path is the quickest to the goal.
+            <br><br>
+            (3) One potential improvement is we could check if a potential path is leading toward the solution (if goal is positive \(x\) and \(y\), we should focus on moving in that direction).
+            <br><br>
+            (4) \(A^*\) is faster than BFS in environments where there is a lot of potential paths. \(A^*\) would not be much faster than BFS is an environment that dose not have a lot of other paths other than the goal. Below is an example where BFS (lower-left) is looking at every potential path and \(A^*\)(lower-right) goes straight toward the goal.
+            <div class="two-images">
+                <img class = "grid-image" src="/photos/narrow-bfs.png" alt="narrow bfs">
+                <img class = "grid-image" src="/photos/narrow-astar.png" alt="narrow bfs">
+            </div>
+        </p>
+    </div>
+    <div class="description">
+        <p align = "center">
+            discription
+        </p>
+        <video controls>
+            <source src="videos/p4-demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+    </div>
+    <!-- <footer>
+        <a href="https://github.com/bli76/bli76.github.io">
+        <img src="github.svg" alt="">
+    </a>
+    </footer> -->
+    <div class="buffer"></div>
+</body>
+</html>
