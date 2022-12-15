@@ -24,26 +24,17 @@
     </div>
     <div class="description">
         <p>
-            Have you ever wondered how a robot gets from point <math><mi>A</mi></math> to a point <math><mi>B</mi></math>? This project answers that question.
-            <br> <br>
-            In this project, we explore the idea breadth first search. First, the lidar scans an area turning that area into grid it can represent mathematically. Second, the lidar sees each grid and puts the coordinates into a queue we have written up in C++. In this algorithm we pop a coordinate from the queue, check this coordinates' neighbors, and see if they have been discovered. If these neighbors have not been discovered then we add them to our queue. We repeat this process until we find our goal. We return this path to our robot and then the robot will drive this path.
-            <br><br>
-            (1) Breadth first search (BFS) will find the shortest path from the starting node to the next node it is looking for. BFS cannot guarantee to return an optimal solution, it only makes the best decision locally. A disadvantage for BFS is that it makes discussion locally, which is great for smaller areas, but when it comes to larger areas it may take longer. Also, all of the nodes need to be stored which can take up quite a bit of memory.
-            <br><br>
-            (2) BFS always finds the shortest path locally, but not always the shortest path in the grand scheme. A-star on the other hand is guaranteed to return the shortest path because it uses path cost to determine if its a good path to take. Thus, A-star makes decision on what path is the quickest to the goal.
-            <br><br>
-            (3) One potential improvement is we could check if a potential path is leading toward the solution (if goal is positive \(x\) and \(y\), we should focus on moving in that direction).
-            <br><br>
-            (4) \(A^*\) is faster than BFS in environments where there is a lot of potential paths. \(A^*\) would not be much faster than BFS is an environment that dose not have a lot of other paths other than the goal. Below is an example where BFS (lower-left) is looking at every potential path and \(A^*\)(lower-right) goes straight toward the goal.
-            <div class="two-images">
-                <img class = "grid-image" src="/photos/narrow-bfs.png" alt="narrow bfs">
-                <img class = "grid-image" src="/photos/narrow-astar.png" alt="narrow bfs">
-            </div>
+            This project was using machine learning algorithms to classify numbers. The camera on the robot was used to 
+            "see" these images and then the model we trained was using the new data to see what the new data was. 
+            We used a neural network because they are able to lean complex patterns in data and make predictions on these patterns.
+            The image classifier does better on the MNIST data set because it is a well-known dataset for training and evaluating images, rather than 102's handwritten data.
         </p>
     </div>
     <div class="description">
         <p align = "center">
-            discription
+            This is the demo or our robot. The robot's camera sees the image,
+            then this image has coordinates associated with it. When it travels to this new
+            destination, it uses our past path-finding algorithm. 
         </p>
         <video controls>
             <source src="videos/p4-demo.mp4" type="video/mp4">
